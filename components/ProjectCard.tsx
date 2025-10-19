@@ -63,11 +63,11 @@ function ProjectCard({ project }: { project: Project }) {
   const cardContent = (
     <div
       id="project"
-      className="w-56 md:w-60 shrink-0 rounded-xl bg-card/60 ring-1 ring-border backdrop-blur supports-[backdrop-filter]:bg-card/60 hover:bg-card transition-colors cursor-pointer"
+      className="w-56 md:w-60  bg-card/60  backdrop-blur supports-[backdrop-filter]:bg-card/60 hover:bg-card transition-colors cursor-pointer"
       role="group"
       aria-label={project.title}
     >
-      <div className="relative aspect-[5/4] overflow-hidden rounded-t-xl">
+      <div className="relative aspect-[5/4] overflow-hidden">
         <Image
           src={project.imageSrc || "/placeholder.svg"}
           alt={project.imageAlt}

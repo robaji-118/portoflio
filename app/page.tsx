@@ -9,12 +9,14 @@ import ContactSection from "@/components/Contact";
 import ExperienceSection from "@/components/Experience";
 import SiteFooter from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import Clock from "@/components/clock/Clock";
 import SmoothScrollProvider from "@/provider/SmoothScrolling";
 
 
 const Page = () => {
   return (
     <main className="relative overflow-hidden">
+      
       <Navbar />
       <SmoothScrollProvider>
         <CustomCursor />

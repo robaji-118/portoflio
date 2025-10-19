@@ -1,0 +1,80 @@
+.clockModule {
+  /* Modern gradient background with glow effect */
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 8px 32px rgba(15, 23, 42, 0.15), inset 0 1px 1px
+    rgba(255, 255, 255, 0.2);
+
+  /* Refined glassmorphism with enhanced backdrop blur */
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+
+  /* Smooth floating animation */
+  animation: float 3s ease-in-out infinite;
+
+  /* Refined transitions for theme and state changes */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clockModule:hover {
+  /* Enhanced glow on hover */
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 12px 48px rgba(15, 23, 42, 0.2), inset 0 1px 1px
+    rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Floating animation for subtle motion */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Shimmer pulse animation for time display */
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Icon rotation animation */
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.timeDisplay {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.clockIcon {
+  animation: iconSpin 20s linear infinite;
+  transform-origin: center;
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .clockModule {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.15) 100%);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 1px
+      rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .clockModule:hover {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 1px
+      rgba(255, 255, 255, 0.15);
+  }
+}
