@@ -1,0 +1,8 @@
+.bgDots {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-background);
+  background-image: radial-gradient(var(--color-foreground) 1.8px, transparent 1.8px);
+  background-size: 28px 28px;
+  transition: background-color 0.4s ease, background-image 0.4s ease;
+}

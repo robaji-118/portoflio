@@ -1,29 +1,23 @@
 "use client";
 
 import React from "react";
+import styles from "./HeroBackground.module.css";
 
 export default function Hero() {
   return (
-    <section id="home"
+    <section
+      id="home"
       className="relative min-h-[100svh] overflow-hidden bg-background text-foreground"
       aria-label="Hero"
     >
       {/* 🟣 Background titik-titik */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          backgroundColor: "hsl(var(--background))",
-          backgroundImage: `radial-gradient(hsl(var(--foreground)) 1.8px, transparent 1.8px)`,
-          backgroundSize: "28px 28px",
-        }}
-      />
+      <div aria-hidden="true" className={styles.bgDots} />
 
       {/* 🟢 Konten utama */}
       <div className="relative z-10 mx-auto flex h-[100svh] max-w-7xl flex-col items-center justify-center px-6 text-center">
         <div className="max-w-3xl">
           <h1 className="text-balance font-sans text-4xl font-semibold tracking-tight md:text-6xl">
-            Hello I'am Rojabby as {" "}
+            Hello I&apos;m Rojabby as{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               a Front End Developer
             </span>
@@ -50,13 +44,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Soft vignette overlay biar lebih lembut */}
+      {/* ✨ Soft vignette overlay */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(1200px 600px at 50% -20%, hsl(var(--primary)/0.08), transparent 60%)",
+            "radial-gradient(1200px 600px at 50% -20%, oklch(var(--primary)/0.08), transparent 60%)",
         }}
       />
     </section>

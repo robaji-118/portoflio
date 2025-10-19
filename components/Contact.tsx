@@ -10,7 +10,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-export default function ContactSection() {
+export default function ContactSection()   {
   return (
     <section id="contact"
       aria-labelledby="contact-heading"
@@ -53,7 +53,7 @@ export default function ContactSection() {
                   id="email"
                   label="Email"
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder="your email"
                 />
                 <FormField
                   id="message"
@@ -82,15 +82,15 @@ export default function ContactSection() {
                 icon={<FaWhatsapp className="h-8 w-8" />}
               />
               <ContactCard
-                href="https://instagram.com/your_profile"
+                href="https://instagram.com/rbyyyyx_."
                 label="Instagram"
-                description="@your_profile"
+                description="@rbyyyyx_."
                 icon={<FaInstagram className="h-8 w-8"/>}
               />
               <ContactCard
-                href="mailto:your@email.com"
+                href="abirojabi8@gmail.com"
                 label="Email"
-                description="your@email.com"
+                description="abirojabi8@gmail.com"
                 icon={<FaEnvelope className="h-8 w-8"/>}
               />
               <ContactCard

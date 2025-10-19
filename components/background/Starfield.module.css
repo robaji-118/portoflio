@@ -1,0 +1,48 @@
+/* container gives subtle radial vignette; keep separate from tailwind utilities */
+.starfield {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+  /* dark subtle noise can be added later */
+}
+
+/* starsLayer sits behind meteors */
+.starsLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* each star is a small circle, use will-change for better perf */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.06));
+  will-change: opacity, transform;
+}
+
+/* meteor layer above stars */
+.meteorLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* meteor visual: a blurred streak using linear-gradient */
+.meteor {
+  position: absolute;
+  height: 2px; /* base height, widen with transform if needed */
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0.0) 100%);
+  filter: blur(0.6px) drop-shadow(0 0 8px rgba(255,255,255,0.35));
+  transform-origin: left center;
+  opacity: 0;
+  will-change: transform, opacity;
+  /* rotate controlled by inline style using Framer Motion rotate */
+}
+
+/* optional: reduce pointer events interference */

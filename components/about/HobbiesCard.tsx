@@ -46,7 +46,7 @@ export default function HobbiesCard() {
       viewport={{ once: true, amount: 0.3 }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className="rounded-xl border border-border/60 bg-background/60 p-6 shadow-sm backdrop-blur-md"
+      className="rounded-xl ring-1 ring-border bg-background/60 p-6 shadow-sm backdrop-blur-md"
     >
       <h3 className="text-lg font-semibold">Hobbies</h3>
       <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
@@ -55,7 +55,7 @@ export default function HobbiesCard() {
           return (
             <motion.li
               key={h.label}
-              className="flex items-center gap-3 rounded-lg border border-border/50 bg-muted/30 p-3 transition-colors hover:bg-accent"
+              className="flex items-center gap-3 rounded-lg ring-1 ring-border p-3 transition-colors hover:bg-accent"
             >
               <span aria-hidden className="text-base text-primary">
                 <Icon className="h-5 w-5" />

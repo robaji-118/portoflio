@@ -57,7 +57,7 @@ export default function SkillsCard() {
       viewport={{ once: true, amount: 0.3 }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className="rounded-xl border border-border/60 bg-background/60 p-6 shadow-sm backdrop-blur-md"
+      className="rounded-xl ring-1 ring-border bg-background/60 p-6 shadow-sm backdrop-blur-md"
     >
       <h3 className="text-lg font-semibold">Skills</h3>
       <motion.ul
@@ -66,7 +66,7 @@ export default function SkillsCard() {
         {skills.map((s) => (
           <motion.li
             key={s.name}
-            className="flex items-center justify-between gap-3 rounded-lg border border-border/50 bg-muted/30 p-3 transition-colors hover:bg-accent"
+            className="flex items-center justify-between gap-3 rounded-lg ring-1 ring-border bg-muted/30 p-3 transition-colors hover:bg-accent"
           >
             <div className="flex items-center gap-3">
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary/10 text-xs font-semibold text-primary">
